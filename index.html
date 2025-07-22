@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login with Telegram</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Login with Telegram</h1>
-    <script async src="https://telegram.org/js/telegram-widget.js" id="telegram-widget"
-        data-telegram-login="memetap_earn_bot" 
-        data-size="large" data-auth-url="dairon.github.io/scb"></script>
+    <script
+      async
+      src="https://telegram.org/js/telegram-widget.js"
+      id="telegram-widget"
+      data-telegram-login="memetap_earn_bot"
+      data-size="large"
+      data-auth-url="https://fusyona-v2.github.io/minigames-web/Game/index.html"
+    ></script>
 
     <script>
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
 
-        const authUrl = getQueryParam('authUrl');
+      const authUrl = getQueryParam("authUrl");
 
-        const telegramWidget = document.getElementById('telegram-widget');
+      const telegramWidget = document.getElementById("telegram-widget");
 
-        if (authUrl) {
-            telegramWidget.setAttribute('data-auth-url', authUrl);
-        }else{
-            telegramWidget.setAttribute('data-auth-url', "dairon.github.io/scb");
-        }
+      if (authUrl) {
+        telegramWidget.setAttribute("data-auth-url", authUrl);
+      }
     </script>
-</body>
+  </body>
 </html>
